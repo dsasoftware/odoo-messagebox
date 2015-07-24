@@ -1,0 +1,14 @@
+<?xml version="1.0"  encoding="utf-8" ?>
+<openerp>
+    <data>
+        <record id="common_messagebox_form" model="ir.ui.view">
+            <field name="name">common messagebox form</field>
+            <field name="model">common.messagebox</field>
+            <field name="arch" type="xml">
+                <form string="dummy">
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>
+
