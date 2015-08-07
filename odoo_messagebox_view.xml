@@ -10,7 +10,10 @@
             <field name="arch" type="xml">
                 <form string="test messagebox">
                     <header>
-                        <button name="action_test" string="Test MsgBox" type="object" class="oe_highlight" />
+                        <button name="action_test" string="MsgBox" type="object" class="oe_highlight" />
+                        <span style="margin-left:30px;">
+                          <button name="action_test_2" string="MsgBox2" type="object" class="oe_highlight" />
+                        </span>
                     </header>
                     <sheet>
                     <group>
