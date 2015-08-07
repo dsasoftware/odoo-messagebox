@@ -56,3 +56,18 @@ class odoo_messagebox(osv.osv):
          cb_ctx['context']['cb_function']='cb_test'   #This is you define function. 
          cb_ctx['context']['msg_text']=u'Are you sure?'  #display message 
          return cb_ctx
+
+    def cb_test2(self,cr,uid,ids,context=None):  #example function
+        _logger.info(' ************ TEST  222 ******************')
+        return True
+
+ 
+    def action_test_2(self,cr,uid,ids,context=None):
+         res = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'odoo_messagebox', 'common_messagebox_form')
+         res_id = res and res[1] or False
+         cb_ctx['name']= u'test messagebox22'  #display  title
+         cb_ctx['view_id']=[res_id]
+         cb_ctx['context']['cb_function']='cb_test2'   #This is you define function. 
+         cb_ctx['context']['msg_text']=u'Are you sure22?'  #display message 
+         return cb_ctx
+         
